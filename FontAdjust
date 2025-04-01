@@ -1,0 +1,24 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class FontAdjust : MonoBehaviour
+{
+    
+    [SerializeField] public int fontSize;
+    [SerializeField] private TMP_Dropdown fontDropdown;
+
+
+    public void GetDropdownValue()
+    {
+        int entryIndex = fontDropdown.value;
+        fontSize = Convert.ToInt16(fontDropdown.options[entryIndex].text);
+        
+        // For testing purposes
+        // Debug.Log(fontSize);
+    }
+
+}
